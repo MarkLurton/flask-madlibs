@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block title %}Choose Your Story{% endblock %} {%
+block content %}
+<form id="story-select-form" action="/form">
+  <label for="story-select">How should your story begin?</label>
+  <select id="story-select" name="story-select">
+    <option value="once_upon_a_time">Once upon a time...</option>
+    <option value="years_in_the_future">Years in the future...</option>
+    <option value="my_mom_taught_me">My mom taught me...</option>
+  </select>
+  <button id="select-submit">Start on my story!</button>
+</form>
+{% endblock %}

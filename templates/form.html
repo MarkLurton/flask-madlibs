@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %}Make Your Story{% endblock %} {%
+block content %}
+<form id="story-form" action="/story">
+  {% for prompt in prompts %}
+  <label for="{{prompt}}">{{prompt.replace('_',' ')}}</label>
+  <input
+    id="{{prompt}}"
+    type="text"
+    name="{{prompt}}"
+    placeholder="{{prompt.replace('_',' ')}}"
+  />
+  {% endfor %}
+  <input
+    type="hidden"
+    id="story-select"
+    name="story-select"
+    value="{{story_select}}"
+  />
+  <button id="submit">Make my story!</button>
+</form>
+{% endblock %}
